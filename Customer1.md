@@ -19,14 +19,20 @@ One POE Chime for doorbell
 One Cat6 connection for hardlined WAP in outbuilding office for professional use.
 
 ## Logical Design and Implementation
-After construction on the remodel was finished, the installation of the Ubiquiti unit was completed, and all physical connection points were in place, the logical portion of the process was conducted.  As network security and stability were high prority items for "C", I created five VLANs on the network using Ubiquiti software. For simplicity, all networks were /28. 
-VLAN1- The main residence private WiFi space
-VLAN2- The security device network
-VLAN3- The IOT network
-VLAN4- The office WAP
-VLAN5- The "Guest" network, which was isolated from all other VLAN's on the network.
+After construction on the remodel was finished, the installation of the Ubiquiti unit was completed, and all physical connection points were in place, the logical portion of the process was conducted.  As network security and stability were high prority items for "C", I created five VLANs on the network using Ubiquiti software.
+
+| VLAN Number | VLAN Name   | IP address range | CIDR |
+|-------------|-------------|------------------|------|
+| VLAN1       | Home WiFi   | 192.168.1.0-.225 | /28  |
+| VLAN2       | Security    | 192.168.2.0-.225 | /28  |
+| VLAN3       | IOT         | 192.168.3.0-.225 | /28  |
+| VLAN4       | Ofiice WiFi | 192.168.4.0-.225 | /28  |
+| VLAN5       | Guest WiFi  | 192.168.5.0-.225 | /28  |
+
+VLAN5 was also isolated from all other VLANs as an added security measure.
 
 ## After Action
+
 ALl in all, the implemetation went smoothly. 
 A bit more cable than necessary was intalled at the initial stage, but there were no issues with cabling being too short for easy use. 
 While I ran all cabling to standard in wall junction boxes, some of Ubiquitis hardware, namely the doorbell chime, could be served better by simply having the cable stubbed out of the drywall so that an exact cut could be made to fit the unit. In order to ensure a clean fit, I cut for the unit directly adjacent to the box, ran the cable through the sidewall into the unit and put a blank plate over the juction box for a clean finish. 
